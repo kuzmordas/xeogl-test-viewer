@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IFC Viewer</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+</head>
+<body>
+    <p>Testing Xeogl API</p>
+    <div class="ifc-info">
+        <h3>Information</h3>
+        <div class="info-node">
+          <label for="model-id">Model ID:</label>
+          <input class="info" type="text" id="model-id" readonly>
+        </div>
+        <div class="info-node">
+            <label for="entity-id">Entity ID:</label>
+            <input class="info" type="text" id="entity-id" readonly>
+        </div>
+        <h3>Groups</h3>
+        <div class="info-node">
+            <label for="group-color">Group name:</label>
+            <input type="text" id="group-name" name="group-name" >
+        </div>
+        <div class="info-node">
+            <button id="add-group">Add Group</button>
+            <button id="refresh-group">Refresh Group</button>
+        </div>
+        <div id="groups"></div>
+    </div>
+    <script src="xeogl.js"></script>
+    <script src="glTFModel.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

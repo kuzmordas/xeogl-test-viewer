@@ -1,0 +1,36 @@
+.ifc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-node {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 200px;
+}
+
+#groups {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.group-info {
+    height: 27px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.group-color {
+    margin: 0 10px 0 auto;
+}
+
+.hide-button {
+    height: 27px;
+}
