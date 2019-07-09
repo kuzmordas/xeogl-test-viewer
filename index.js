@@ -33,7 +33,7 @@ xeogl.setDefaultScene(scene);
 
 let model1 = new xeogl.GLTFModel({
     id: "model1",
-    src: "./test.gltf",
+    src: "./xl.gltf",
     handleNode: function (nodeInfo, actions) {
         if (nodeInfo.name && nodeInfo.mesh !== undefined) {
             actions.createObject = {
@@ -70,11 +70,11 @@ let model2 = new xeogl.GLTFModel({
     position: [0.15, 0, 0]
 });
 
-let camera = model1.scene.camera;
+let camera = model2.scene.camera;
 
-camera.eye = [-0.022085249423980713, 0.16638542711734772, -0.23436935245990753];
-camera.look = [0.125, 0.014999999664723873, -0.04999999701976776];
-camera.up = [0.3368628919124603, 0.8415539264678955, 0.42226824164390564];
+camera.eye = [-0.6461755037307739, 1.0832817554473877, -0.6558935642242432];
+camera.look = [1.128140926361084, -0.40583744645118713, -1.1894490718841553];
+camera.up = [0.599919319152832, 0.7794561982154846, -0.18040208518505096];
 
 let cameraControl = new xeogl.CameraControl({
     panToPointer: true,
@@ -181,7 +181,6 @@ function colorizeGroup(name, color) {
     const group = entityGroups[name];
     group.forEach(e => {
         e.colorize = [...rgb, 1.0];
-        console.log(e.colorize)
     })
 }
 
