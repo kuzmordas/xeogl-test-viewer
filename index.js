@@ -33,7 +33,7 @@ xeogl.setDefaultScene(scene);
 
 let model1 = new xeogl.GLTFModel({
     id: "model1",
-    src: "./xl.gltf",
+    src: "./customer_model.gltf",
     handleNode: function (nodeInfo, actions) {
         if (nodeInfo.name && nodeInfo.mesh !== undefined) {
             actions.createObject = {
@@ -51,30 +51,30 @@ let model1 = new xeogl.GLTFModel({
     position: [0, 0, 0]
 });
 
-let model2 = new xeogl.GLTFModel({
-    id: "model2",
-    src: "./test.gltf",
-    handleNode: function (nodeInfo, actions) {
-        if (nodeInfo.name && nodeInfo.mesh !== undefined) {
-            actions.createObject = {
-                id: `${makeid(10)}`,
-                meta: {
-                   id: nodeInfo.name,
-                   projectId: 'my_awesome_ifc_2'
-                }
-            };
-        }
-        return true;
-    },
-    scale: [.01, .01, .01],
-    position: [0.15, 0, 0]
-});
+// let model2 = new xeogl.GLTFModel({
+//     id: "model2",
+//     src: "./test.gltf",
+//     handleNode: function (nodeInfo, actions) {
+//         if (nodeInfo.name && nodeInfo.mesh !== undefined) {
+//             actions.createObject = {
+//                 id: `${makeid(10)}`,
+//                 meta: {
+//                    id: nodeInfo.name,
+//                    projectId: 'my_awesome_ifc_2'
+//                 }
+//             };
+//         }
+//         return true;
+//     },
+//     scale: [.01, .01, .01],
+//     position: [0.15, 0, 0]
+// });
 
-let camera = model2.scene.camera;
+let camera = model1.scene.camera;
 
-camera.eye = [-0.6461755037307739, 1.0832817554473877, -0.6558935642242432];
-camera.look = [1.128140926361084, -0.40583744645118713, -1.1894490718841553];
-camera.up = [0.599919319152832, 0.7794561982154846, -0.18040208518505096];
+camera.eye = [2.2468039989471436, 0.3893416225910187, -0.04712609946727753];
+camera.look = [2.3708364963531494, 0.24616990983486176, -0.2916121780872345];
+camera.up = [0.20943601429462433, 0.8864023089408875, -0.412828654050827];
 
 let cameraControl = new xeogl.CameraControl({
     panToPointer: true,
